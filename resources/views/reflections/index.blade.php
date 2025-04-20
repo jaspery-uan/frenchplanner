@@ -2,12 +2,18 @@
 <head>
     <meta charset="UTF-9">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Liste de Reflections</title>
+    <title>Liste de Reflections | </title>
 </head>
 <body>
+    <h2>Reflections!!</h2>
+
+    <ul>
+        <li>Liste</li>
+    </ul>
+
     <h1>Les reflections</h1>
     <p>Voici les reflections</p>
-    <a href="/reflections" class="btn">
+    <a href="/" class="btn">
         Click here
     </a>         
 </body>
