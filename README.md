@@ -8,3 +8,13 @@ This system is based on the Portfolio model developed by Ms. Herfst and Ms. Pier
 - Teacher Dashboard: View individual student progress over time.
 - Login System: Email and password-based login.
 - Student Resources: Access special resources for enhancing skills curated by teachers.
+
+### Setup instructions
+These instructions assume that the necessary software (Laravel Herd and node.js) is downloaded locally and the files are up to date.
+1. Open the local folder on VSCode. 
+2. Open Windows PowerShell terminal.
+3. Run formatting with the following line:
+```
+npm run dev
+```
+4. Visit http://csproject.test.
