@@ -3,12 +3,14 @@
     <meta charset="UTF-9">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Liste de Reflections</title>
+    
+    @vite('resources/css/app.css')
+
 </head>
-<body>
-    <h1>Les reflections</h1>
-    <p>Voici les reflections</p>
+<body class="text-center px-8 py-12">
+    <h1>Les reflexions</h1>
     <a href="/reflections" class="btn">
-        Click here
-    </a>         
+        La liste des reflexions
+    </a>
 </body>
 </html>
