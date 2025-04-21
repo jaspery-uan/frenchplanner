@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ReflectionsController;
 
@@ -7,12 +8,27 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/reflections', [ReflectionsController::class, 'index'])->name('reflections.index');
+Route::middleware('guest')->controller(AuthController::class)->group(function () {
 
-Route::get('/reflections/create', [ReflectionsController::class, 'create'])->name('reflections.create'); 
+    Route::get('/register', 'showRegister')->name('show.register');
 
-Route::get('/reflections/{id}', [ReflectionsController::class, 'show'])->name('reflections.show'); 
+    Route::get('/login', 'showLogin')->name('show.login');
 
-Route::post('/reflections', [ReflectionsController::class, 'store'])->name('reflections.store');
+    Route::post('/register', 'register')->name('register');
 
-Route::delete('/reflections/{id}', [ReflectionsController::class, 'destroy'])->name('reflections.destroy');
+    Route::post('/login', 'login')->name('login');
+});
+
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+Route::middleware('auth')->controller(ReflectionsController::class)->group(function () {
+    Route::get('/reflections', 'index')->name('reflections.index');
+
+    Route::get('/reflections/create', 'create')->name('reflections.create'); 
+
+    Route::get('/reflections/{id}', 'show')->name('reflections.show'); 
+
+    Route::post('/reflections', 'store')->name('reflections.store');
+
+    Route::delete('/reflections/{id}', 'destroy')->name('reflections.destroy');
+});

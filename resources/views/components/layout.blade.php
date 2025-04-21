@@ -16,8 +16,24 @@
     <header>
         <nav>
             <h1>Reflexions</h1>
-            <a href="{{ route('reflections.index') }}">Tous les reflexions</a>
-            <a href="{{ route('reflections.create') }}">Creer une reflexion</a>
+            <!--a href="{{ route('reflections.index') }}">Tous les reflexions</a!-->
+            @guest
+            <a href="{{ route('show.login') }}" class="btn">Ouvrir une session</a>
+            <a href="{{ route('show.register') }}" class="btn">S'inscrire</a>
+            @endguest
+
+            @auth
+                <span class="border-r-2 pr-2">
+                    Bonjour, {{ Auth::user()->name }}
+                </span>
+                <a href="{{ route('reflections.create') }}">Creer une reflexion</a>
+
+                <form action="{{route('logout')}}" method="POST" class="m-0">
+                    @csrf
+                    <button class="btn">Deconnexion</button>
+                </form>
+            @endauth
+
     </header>
     <main class="container">
         {{ $slot }}

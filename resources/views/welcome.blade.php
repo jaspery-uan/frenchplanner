@@ -9,6 +9,7 @@
 </head>
 <body class="text-center px-8 py-12">
     <h1>Les reflexions</h1>
+    <br><br>
     <a href="/reflections" class="btn">
         La liste des reflexions
     </a>
