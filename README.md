@@ -9,7 +9,7 @@ This system is based on the Portfolio model developed by Ms. Herfst and Ms. Pier
 - Login System: Email and password-based login.
 - Student Resources: Access special resources for enhancing skills curated by teachers.
 
-### Setup instructions
+### Access instructions
 These instructions assume that the necessary software (Laravel Herd and node.js) is downloaded locally and the files are up to date.
 1. Open the local folder on VSCode. 
 2. Open Windows PowerShell terminal.
@@ -18,3 +18,31 @@ These instructions assume that the necessary software (Laravel Herd and node.js)
 npm run dev
 ```
 4. Visit http://csproject.test.
+
+### Initial Setup
+These instructions assume that the user has not accessed any package or application relevant to this project beyond the README.md file.
+1. Download Laravel Herd, choosing the preferred setup specifications for the user.
+2. Open the preferred IDE and access the Git Bash terminal.
+3. Clone this repository and enter the newly created folder with the following lines:
+```
+git clone https://github.com/jaspery-uan/frenchplanner.git
+cd frenchplanner
+```
+4. Install the PHP and frontend (JS/CSS) dependencies with the following lines:
+```
+composer install
+npm install
+```
+5. Set up the .env file using .env.example:
+```
+cp .env.example .env
+```
+6. Generate the app key:
+```
+php artisan key:generate
+```
+7. Build the frontend assets using Vite:
+```
+npm run dev
+```
+8. Open the locally hosted site http://csproject.test.
