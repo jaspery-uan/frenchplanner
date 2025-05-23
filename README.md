@@ -48,7 +48,9 @@ npm run dev
 
 ### References
 
+[1] J. Otwell, 30 Days to Learn Laravel 11 [Online]. Available: https://laracasts.com/series/30-days-to-learn-laravel-11
 
+[2] Laravel, "Common Issues – Windows Troubleshooting," Laravel Herd Documentation, [Online]. Available: https://herd.laravel.com/docs/windows/troubleshooting/common-issues
 
 All edited files are indicated so by the personalized header at the beginning. It should be noted that the following folders and files were created by the Laravel Herd project template and were not edited during the development process:
 
