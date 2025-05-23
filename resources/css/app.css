@@ -1,15 +1,31 @@
-@import 'tailwindcss';
+/**
+ * French Learning Tracker Application
+ * ICS4U
+ * Laura, Joshua, Jasper
+ * Global CSS styles using Tailwind and custom overrides:
+ * - Imports Tailwind and configures theme
+ * - Applies styles for headers, layout, forms, and utilities
+ *
+ * History:
+ * February 12: File creation
+ * April 21: Added all specific adjustments
+ * May 22: Added comments
+ */
+ 
+@import 'tailwindcss'; /* Import Tailwind styles */
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
 @source '../**/*.blade.php';
 @source '../**/*.js';
 
+/* Create font theme */
 @theme {
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
+/* Body theme */
 body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 16px;
@@ -17,7 +33,7 @@ body {
     color: #000000;
     background-color: #c9a0ff
 }
-
+/* Various heading styles, paragraphs, lists */
 h1 {
     @apply text-2xl font-bold text-purple-500;
 }
@@ -34,6 +50,7 @@ p {
     @apply my-2;
 }
 
+/* Header bar */
 header {
     @apply bg-white;
 
@@ -45,6 +62,7 @@ header {
     }
     }
 
+    /* Form layout and input */
     form {
     @apply max-w-screen-sm;
     }
@@ -52,6 +70,7 @@ header {
     @apply block w-full mt-2 mb-4 p-2 bg-purple-100 border border-gray-300 rounded;
     }
 
+    /* Containers and cards */
     .container {
     @apply max-w-screen-lg mx-auto px-12 py-8;
     }
@@ -61,6 +80,8 @@ header {
     .highlight {
     @apply border-l-4 border-l-green-500;
     }
+    
+    /* Button style */
     .btn {
     @apply rounded px-3 py-2 bg-purple-400 hover:bg-red-500 hover:text-white;
     }

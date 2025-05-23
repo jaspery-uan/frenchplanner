@@ -45,3 +45,30 @@ php artisan key:generate
 npm run dev
 ```
 8. Open the locally hosted site http://csproject.test.
+
+### References
+
+
+
+All edited files are indicated so by the personalized header at the beginning. It should be noted that the following folders and files were created by the Laravel Herd project template and were not edited during the development process:
+
+- App\Providers
+- Bootstrap
+- Config
+- Database\Factories\UserFactory
+- Database\Migrations\ (create users, create cache, create jobs)
+- Public
+- Resources\js
+- Storage
+- Tests
+- .editorconfig
+- .env.example
+- .gitattributes
+- .gitignore
+- artisan
+- composer.json
+- composer.lock
+- package-lock.json
+- package.json
+- phpunit.xml
+- vite.config.js

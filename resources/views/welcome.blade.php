@@ -1,3 +1,14 @@
+{{--
+French Learning Tracker Application
+ICS4U
+Laura, Joshua, Jasper
+Welcome view for the application (basic landing page with a title and a button linking to the reflections list)
+History:
+February 12: File creation
+April 21: Added all specific adjustments
+May 22: Added comments
+--}}
+
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="UTF-9">
